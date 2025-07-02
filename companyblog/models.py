@@ -2,7 +2,7 @@
 from companyblog import db, login_manager
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
-from sqlalchemy.sql import func
+from sqlalchemy import Column, DateTime, text
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -38,7 +38,7 @@ class BlogPost(db.Model):
 
     id = db.Column(db.Integer,primary_key=True)
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'),nullable=False)
-    date = db.Column(db.DateTime(timezone=True),nullable=False,server_default=func.now())
+    date = db.Column(db.DateTime(timezone=True),nullable=False,server_default=text('now()'))
     title = db.Column(db.String(140),nullable=False)
     text = db.Column(db.Text,nullable=False)
 

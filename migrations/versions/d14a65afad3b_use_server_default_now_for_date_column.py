@@ -21,9 +21,8 @@ def upgrade():
     with op.batch_alter_table('blog_post', schema=None) as batch_op:
         batch_op.alter_column('date',
                existing_type=postgresql.TIMESTAMP(),
-               type_=sa.DateTime(timezone=True),
-               existing_nullable=False,
-               server_default=sa.text('now()') )
+               type_=sa.DateTime(timezone=True),server_default=sa.text('now()'),
+               existing_nullable=False)
 
     # ### end Alembic commands ###
 
