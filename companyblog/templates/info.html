@@ -1,7 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-    <h1>Info about our company</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat odio vel autem et? Non quam fugiat corporis. Est iure minus aliquid, suscipit deleniti optio. Enim ullam quam illo saepe aperiam.</p>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card mt-5 shadow-sm">
+        <div class="card-body">
+          <h1 class="card-title text-center mb-4">Welcome!</h1>
+          <p class="card-text">This project is a full-stack web application built with Python’s Flask framework and SQLAlchemy to provide a secure, user-friendly internal blogging platform—complete with registration, login/logout, profile management (including image uploads processed with Pillow), and full CRUD operations for posts. It uses PostgreSQL locally via pgAdmin and in production on Render, leverages Flask-WTForms for validation, and employs Bootstrap 5 for a responsive UI. With core functionality—user authentication, flash messaging, and database integration.</p>
+          <p>Next, the project will be Dockerized and CI/CD pipelines will be established. Current efforts are focused on UI refinements, ensuring reliable disk-based image storage on Render, and adding API integration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
