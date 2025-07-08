@@ -1,0 +1,10 @@
+
+/* Fix blurred default profile picture img*/
+.pixelated {
+  /* Standard */
+  image-rendering: crisp-edges;
+  /* Chrome, Safari */
+  image-rendering: -webkit-optimize-contrast;
+  /* Firefox */
+  image-rendering: pixelated;
+}

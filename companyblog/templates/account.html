@@ -1,17 +1,51 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <h1>Welcome to the page for {{current_user.username}}</h1>
-    <img src="{{url_for('static',filename='profile_pics/'+current_user.profile_image)}}">
-
-</div>
-<div class="container">
-    <form method="POST" action="" enctype="multipart/form-data">
-        {{form.hidden_tag()}}
-        {{form.username.label}}{{form.username()}}
-        {{form.email.label}}{{form.email()}}
-        {{form.picture.label}}{{form.picture()}}
-        {{form.submit()}}
-    </form>
+<div class="container mt-2">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
+<div class="container mb-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card mt-5 shadow-sm">
+        <div class="card-body">
+          <h1 class="card-title text-center mb-4">Welcome to your page, {{ current_user.username }}</h1>
+          <div class="text-center mb-4">
+            <img src="{{ url_for('static', filename='profile_pics/' + current_user.profile_image) }}"
+                 class="pixelated rounded-circle img-thumbnail"
+                 alt="Profile picture of {{ current_user.username }}"
+                 width="150">
+          </div>
+          <h2 class="h5 text-center mb-4">Update Account Details</h2>
+          <form method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="mb-3">
+              {{ form.username.label(class="form-label") }}
+              {{ form.username(class="form-control") }}
+            </div>
+            <div class="mb-3">
+              {{ form.email.label(class="form-label") }}
+              {{ form.email(class="form-control") }}
+            </div>
+            <div class="mb-3">
+              {{ form.picture.label(class="form-label") }}
+              {{ form.picture(class="form-control") }}
+            </div>
+            <div class="d-grid">
+              {{ form.submit(class="btn btn-primary btn-block") }}
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
