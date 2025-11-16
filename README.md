@@ -3,7 +3,7 @@
 A **full-stack Flask web application** that enables users to create accounts, publish posts, and interact within a company-style blogging platform. Built with a modern stack to demonstrate **backend engineering, database design, and deployment skills**.  
 
 ---
-## 💻 Visit the App --> https://nicos-flask-social-company-blog-project.onrender.com
+## 💻 Visit the App --> https://nfscbp.cloud/
 
 ## 🌟 Features  
 
@@ -13,7 +13,7 @@ A **full-stack Flask web application** that enables users to create accounts, pu
 - 📂 **Modular Blueprints** for clean Flask architecture  
 - 📊 **PostgreSQL Database** with SQLAlchemy ORM & Flask-Migrate  
 - 🎨 **Responsive Frontend** with Bootstrap 5 + custom CSS  
-- ☁️ **Deployed on Render** (web service + PostgreSQL instance)  
+- ☁️ **Deployed on a VPS** with Hostinger  
 - 🐳 **Docker Ready** for containerized deployment *(planned)*  
 
 ---
@@ -24,7 +24,7 @@ A **full-stack Flask web application** that enables users to create accounts, pu
 - [Python 3](https://www.python.org/)  
 - [Flask](https://flask.palletsprojects.com/) (Flask-WTF, Flask-Login, Flask-Migrate)  
 - [SQLAlchemy](https://www.sqlalchemy.org/) ORM  
-- [PostgreSQL](https://www.postgresql.org/) (via Render hosting)  
+- [PostgreSQL](https://www.postgresql.org/)  
 
 **Frontend:**  
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)  
@@ -34,7 +34,7 @@ A **full-stack Flask web application** that enables users to create accounts, pu
 
 **DevOps / Tools:**  
 - [Docker](https://www.docker.com/) *(planned)*  
-- [Render](https://render.com/) (deployment + database hosting)  
+- [Hostinger](https://www.hostinger.com/?utm_campaign=Brand-RET|NT:Se|LO:USA&utm_medium=ppc&gad_source=1&gad_campaignid=12461035153&gbraid=0AAAAADMy-hZ5XrFZFGp_TyCc5lFKGAIxk&gclid=Cj0KCQiA5uDIBhDAARIsAOxj0CFBl7bBk1FObabZ771f6_swWtqydUCEe8grXvhwNFu_Zr6W0TBroBEaAuWdEALw_wcB) (deployment + database hosting)  
 - [pgAdmin](https://www.pgadmin.org/) for DB management  
 - [Git & GitHub](https://github.com/) for version control  
 
